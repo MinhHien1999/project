@@ -35,4 +35,8 @@ Route::prefix('admin/category')->group(function () {
         'as' => 'category.create',
         'uses' => 'categoryController@create'
     ]);
+    Route::post('/Add', [
+        'as' => 'category.add',
+        'uses' => 'categoryController@add'    
+    ]);
 });

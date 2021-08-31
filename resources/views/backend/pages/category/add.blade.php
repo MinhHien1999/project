@@ -15,20 +15,18 @@
                 </div> --}}
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form>
+                <form action="{{route('category.add')}}" method="POST">
+                  @csrf
                   <div class="card-body">
                     <div class="form-group">
                       <label>Tên danh mục</label>
-                      <input type="" class="form-control" id="" placeholder="ghi tên danh mục">
+                      <input type="" class="form-control" name="nameCategory" id="" placeholder="ghi tên danh mục">
                     </div>
                     <div class="form-group">
                       <label>Chọn danh mục cha</label>
-                      <select class="form-control">
-                        <option>option 1</option>
-                        <option>option 2</option>
-                        <option>option 3</option>
-                        <option>option 4</option>
-                        <option>option 5</option>
+                      <select class="form-control" name="parent_idCategory">
+                        <option value="0">Danh mục cha</option>
+                        {{!!$htmlOption!!}}
                       </select>
                     </div>
                   </div>
